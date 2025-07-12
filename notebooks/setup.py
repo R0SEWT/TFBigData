@@ -1,6 +1,8 @@
 from pathlib import Path
 import os
 import sys
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 
 def set_project_root():
@@ -25,3 +27,7 @@ def set_project_root():
     os.chdir(project_root)
     print(f"Current working directory: {Path.cwd()}")
     sys.path.append(str(project_root / "src"))
+
+
+plt.style.use('seaborn-v0_8-whitegrid')
+sns.set_palette("husl")
